@@ -1,0 +1,835 @@
+/* --------------------------- ----------------------- ------------------- PAGE LAYOUT - GENERAL  ------------------------- -------------------------------------- -----------------------------*/
+
+html {
+  overflow-x: scroll;
+}
+
+.sitecontainer {
+  font-family: "Roboto-Bold";
+  font-size: 16px;
+  width: 70%;
+  height: auto;
+  border: 1px solid #60401f;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1px;
+  background-color: white;
+  }
+
+.container {  /*for all the sections except the header and footer*/
+  min-width: 98%;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.divider {    /*used to restore the full width of  sitecontainer and for the headings in Learning and Thesis*/
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  min-width:100%;
+  background-color: transparent
+}
+
+.divider span {
+  font-size: 2rem;
+  font-weight: bold;
+  color:  #60401f;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+
+#splash {  /*identifies the banner section (two columns: banner and rightside*/
+    justify-content: flex-start;
+    background-color:	#dcdcdc;
+    padding-top: 4rem;
+
+}
+
+#second-section {  /*used for the Information and Thesis sections ( two columns:info or  leftside and rightside */
+    max-width: 90%;
+    justify-content: flex-start;
+    background-color:	white;
+    margin-top: 2rem;
+}
+
+
+#third-section {  /*used for the Learning section single column*/
+    flex-flow: column;
+    max-width: 90%;
+    justify-content: center;
+    background-color: hsla(0, 0%, 92%, 1);
+}
+
+.banner, .info,
+.leftside, .rightside  {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.leftside { /*for used for the Information and Thesis sections --column orientation on each of two sides*/
+  min-width: 60%;
+}
+
+.rightside { /*Banner, Info and Thesis sections */
+  min-width: 40%;
+  margin-right: 2rem;
+  margin-left: 1.5rem;
+}
+
+p {
+  font-size: 1.77rem;
+}
+
+p,
+h1,
+ h2,
+ h3 {
+    color: #60401f;
+    padding-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: white;
+}
+
+#blue {
+  color: blue;
+}
+
+/* --------------------------- ----------------------- ------------------- FOOTER section ------------------------- -------------------------------------- -----------------------------*/
+
+footer {
+  min-width: 97%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-top: 1px solid 	#60401f;
+}
+
+#footer-left {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-right {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+footer span,  #select  {
+  height: 4rem;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+ #select  {
+  margin-right: 2rem;
+}
+
+
+/* --------------------------- ----------------------- ------------------- RESPONSIVE - FOOTER ------------------------- -------------------------------------- -----------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+ .footer-right {
+   display: none;
+ }
+}
+
+
+/* --------------------------- ----------------------- ------------------- HEADER   section ------------------------- -------------------------------------- -----------------------------*/
+
+header { /*full-width palceholder with turquoise background*/
+  width: 100%;
+  background-color: #afeeee;
+  height: 4rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left,
+.header-right  { /*containers for the two ends of the header*/
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+
+}
+
+.header-left { /*contains logo and text*/
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.header-right { /*contains navigation  buttons*/
+  justify-content: flex-end;
+}
+
+#logo {
+  height: 50%;
+  padding-left:  0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+ align-content: center;
+ background-color: white;
+  flex-flow: row;
+  align-items: center;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+#text {  /*heavily padded right to cover the turquoise background*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  height: 100%;
+  font-size: 1.2rem;
+  padding-left: .5rem;
+  padding-right: 31rem;
+  background-color: white;
+}
+
+#text strong {
+  font-weight: bold;
+}
+
+span .button {
+  width: auto;
+  height: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: .15rem;
+  background-color: white;
+}
+
+span .button-mobile {
+  display: none;
+}
+
+#last {
+  margin-right: 0;
+    padding-right: 2rem;
+}
+
+/* --------------------------- ----------------------- ------------------- RESPONSIVE - HEADER section ------------------------- -------------------------------------- -----------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+  header {
+    min-width: 80%;
+    max-width:  80%;
+    height: 4rem;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .header-left,
+  .header-right  {
+    display: inline-flex;
+    min-height: 100%;
+    align-items: center;
+  }
+
+  .header-left {
+    justify-content: flex-start;
+  }
+
+  .header-right {
+    min-width: 100%;
+    justify-content: space-between;
+  }
+
+#logo {
+ padding-right: 2rem;
+ padding-left: 0;
+}
+
+span .button,
+ #text {
+  display: none;
+  }
+
+ span .button-mobile {
+     display: block;
+     height: 2rem;
+     }
+
+ span .button-mobile:first-child {
+    padding-left: 2rem;
+     }
+
+  span .button-mobile:last-child {
+    padding-right:1rem;
+  }
+
+ .sitecontainer {
+       border: none;
+   }
+
+}
+
+/* --------------------------- ----------------------- ------------------- BANNER  section ------------------------- -------------------------------------- -----------------------------*/
+
+.banner { /*container for the banner image*/
+  height: 35rem;
+  min-width: 100%;
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 35rem;
+}
+
+.bannertext { /*container for left side text*/
+  max-width: 60%;
+  margin-top: 8rem;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  }
+
+  .bannertext span {
+    display: inline-flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+.bannertext h1,
+.bannertext h2  {
+  color: #60401f;
+  font-weight: bold;
+  display: inline-flex;
+  }
+
+.bannertext h1 {
+  font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+.bannertext h2  {
+  font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .bannertext .button {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #60401f;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* --------------------------- ----------------------- ------------------- RESPONSIVE - BANNER and  INFORMATION  sections ------------------------- -------------------------------------- -----------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+.sitecontainer {
+  min-width: 480px;
+  max-width: 480px;
+  border: none;
+  margin: 0;
+}
+
+.container,  .leftside,  .rightside {
+  min-width: 100%;
+  margin-top: 0;
+  margin-left: -1rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+.divider {
+  width: 90%;
+}
+ #splash, #second-section, #third-section {
+   margin-top: 0;
+   padding-top: 0;
+ }
+
+.leftside  .banner {
+   height: 22em;
+   min-width: 100%;
+   background-size: cover;
+   margin-top: 0;
+ }
+
+ .rightside .bannertext {
+   max-width: 90%;
+   padding-top: 1rem;
+   margin-left: 2rem;
+   margin-top: 0;
+   display: inline-flex;
+   flex-flow: column;
+ }
+
+  .rightside .bannertext .button {
+     max-width: 100%;
+ }
+
+.info, .infotext h1,  .infotext h2, .infotext p{
+    display: none;
+    }
+
+.list-items {
+      margin: 0rem 1.5rem 0rem 1.5rem;
+      align-items: flex-start;
+
+}
+.list-items .item {
+    min-width: 100%;
+    height: auto;
+    flex-flow: column;
+    padding-bottom: 0;
+    background-color: white;
+ }
+
+.list-items .item .itemdesc {
+  width: 95%;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+.item .orientation,
+.item .campus,
+.item .guest {
+   display: none;
+ }
+
+ .item .orientation-mobile,
+ .item .campus-mobile,
+ .item .guest-mobile {
+   display: block;
+  height: 10rem;
+   width: 100%;
+  background-size:  cover;
+ }
+
+.list-items .item:last-of-type {
+     background-color:white !important;
+     width: 37%;
+ }
+}
+
+/* --------------------------- ----------------------- ------------------- INFORMATION section ------------------------- -------------------------------------- -----------------------------*/
+
+.info { /*container  for the Information image*/
+  height: 30rem;
+  min-width: 100%;
+  background-image: url("../images/information-main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 30rem;
+}
+
+.infotext { /*container for the text below the image*/
+  max-width: 95%;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  }
+
+.infotext h1, .coursetext h1 { /*same definitions used in Information and Learning sections*/
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.infotext h2 .coursetext h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  }
+
+  .author { /*author info at  bottom left of section */
+    font-size: 1rem;
+   align-items: center;
+  }
+
+.list-items { /*container for information items on left side*/
+  min-width: 37.5%;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+ .item { /*container for indivifual information  items -- also used in Thesis section*/
+  min-width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 0;
+margin-top: 0;
+margin-bottom: 2rem;
+}
+
+.orientation, .campus,  .guest { /*individual information item images*/
+  display: block;
+  background-repeat: no-repeat;
+  height: 12rem;
+  width: 35%;
+  background-size:  cover;
+  margin-left: 1rem;
+    }
+
+  .orientation-mobile,
+  .campus-mobile,
+  .guest-mobile {
+    display: block;
+    background-repeat: no-repeat;
+    height: 12rem;
+    width: 100%;
+    background-size:  cover;
+    display: none;
+  }
+
+.orientation {
+   background-image: url("../images/information-orientation.jpg");
+}
+
+.orientation-mobile {
+    background-image: url("../images/information-orientation-mobile.jpg");
+}
+
+.campus {
+      background-image: url("../images/information-campus.jpg");
+}
+
+.campus-mobile {
+  background-image: url("../images/information-campus-mobile.jpg");
+}
+
+.guest {
+    background-image: url("../images/information-guest-lecture.jpg");
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.guest-mobile {
+  background-image: url("../images/information-guest-lecture-mobile.jpg");
+  }
+
+.item .itemdesc {    /*container for individual info item text*/
+  display: inline-flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.item .itemdesc .bullet {
+  display: inline-flex;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+#bold {
+  color: #60401f;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#parag {
+  color: #60401f;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.15;
+}
+
+#blue a {
+   color: blue;
+   font-size: .75rem;
+   font-weight: bold;
+   line-height: 2;
+}
+
+.list-items .item:last-of-type { /*background for guest lecture item*/
+    background-color:	#dcdcdc;
+    width: 37%;
+}
+
+/* --------------------------- ----------------------- ------------------- LEARNING section ------------------------- -------------------------------------- -----------------------------*/
+
+.course-items {  /*container for individual learning items in Information section*/
+  min-width: 50%;
+  margin-left: 72px;
+  margin-right: 72px;
+  margin-bottom: 32px;
+  display: inline-flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.course-items-mobile {
+  display: none;
+}
+
+.course { /*individual learning item*/
+  max-width: 25%;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 1rem;
+  padding-top: 2rem;
+}
+
+.software {
+  height: 10rem;
+  min-width: 100%;
+  display: block;
+  background-image: url("../images/course-software.jpg");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-size: 10rem 100%:
+  }
+
+  .computer {
+    height: 10rem;
+    min-width: 100%;
+    display: block;
+    background-image: url("../images/course-computer-art.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-size: 10rem 100%:
+    }
+
+.design {
+      height: 10rem;
+      min-width: 100%;
+      display: block;
+      background-image: url("../images/course-design.jpg");
+      background-repeat: no-repeat;
+      background-size:  cover;
+      background-size: 10rem 100%:
+      }
+
+  .data {
+    height: 10rem;
+    min-width: 100%;
+    display: block;
+    background-image: url("../images/course-data.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-size: 10rem 100%:
+  }
+
+  .business {
+    height: 10rem;
+    min-width: 100%;
+    display: block;
+    background-image: url("../images/course-business.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-size: 10rem 100%:
+  }
+
+  .marketing {
+    height: 10rem;
+    min-width: 100%;
+    display: block;
+    background-image: url("../images/course-marketing.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-size: 10rem 100%:
+}
+
+.coursetext { /*container for individual learning item text*/
+  height: 10rem;
+  max-width: 86%;
+  flex-flow: column;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  background-color: white;
+}
+
+.coursetext h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.coursetext p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* --------------------------- ----------------------- ------------------- RESPONSIVE - LEARNING section ------------------------- -------------------------------------- -----------------------------*/
+
+@media only screen and (max-width: 480px) {
+.course-items {
+  display: none;
+}
+
+.divider span {
+  padding-bottom: 1rem;
+}
+.course-items-mobile {
+  min-width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ .course-items-mobile nav ul li {
+   width: 85%;
+   height: 3rem;
+   display: inline-flex;
+   flex-flow: row;
+   justify-content: center;
+   align-items: center;
+  background-color:	#dcdcdc;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+   margin-bottom: .5rem;
+   color: #60401f;
+   font-size: 1rem;
+   font-weight: bold;
+}
+}
+/* --------------------------- ----------------------- ------------------- THESIS section ------------------------- -------------------------------------- -----------------------------*/
+
+.movie {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  height: auto;
+  width: 90%;
+  margin-left: 2rem;
+}
+
+.movie video {
+ object-fit: cover;
+}
+
+.thesis-items { /*equivalent to list-items element in Information section*/
+  min-width: 37.5%;
+  height: auto;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.fisma, .nowandthen {
+  display: block;
+  background-repeat: no-repeat;
+  height: 12rem;
+  width: 35%;
+  background-size:  cover;
+  margin-left: 1rem;
+}
+
+.fisma {
+     background-image: url("../images/thesis-fisma.jpg");
+  }
+
+
+.nowandthen {
+    background-image: url("../images/thesis-now-and-then.jpg");
+  }
+
+.thesis-items .item:first-child {
+    background-color:	#dcdcdc;
+}
+
+.thesis-items .item:last-child {
+  background-color: white;
+}
+
+/* --------------------------- ----------------------- ------------------- RESPONSIVE - THESIS section------------------------- -------------------------------------- -----------------------------*/
+
+@media only screen and (max-width: 480px) {
+.container #second-section .leftside {
+  margin-top: 0;
+}
+
+ .divider span {
+   margin-top: 2rem;
+   margin-bottom: 0;
+ }
+
+ .movie {
+  width: 100%;
+   margin-top: 0;
+ }
+
+ .thesis-items .item {
+   display: none;
+ }
+
+}
